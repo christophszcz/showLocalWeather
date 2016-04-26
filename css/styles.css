@@ -3,6 +3,7 @@ body{
 }
 .weather-app-title{
   color: white;
-  font-family: "Lato";
+  font-family: 'Oswald', sans-serif;
   text-align: center;
+  margin-top: 200px;
 }
