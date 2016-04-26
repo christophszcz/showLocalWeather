@@ -1,0 +1,8 @@
+body{
+  background-color: black;
+}
+.weather-app-title{
+  color: white;
+  font-family: "Lato";
+  text-align: center;
+}
