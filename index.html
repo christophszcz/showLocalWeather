@@ -9,41 +9,52 @@
     <title>Show Local Weather</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <h1 class="weather-app-title">Free Code Camp Weather App</h1>
+    <h1 class="weather-app-title">Free Code Camp Weather App</h1>
 
+    <div class="container content">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <button class="btn btn-default">Change to &deg;</button>
-          </div> 
+          <div class="col-md-1 col-md-offset-5">
+            <img src='https://img.clipartfest.com/18dfe1e3697233eb3b5be163dd1f51d0_windy-weather-clip-art-free-weather-symbols-clipart_425-404.jpeg' height='100px'/>
+          </div>
+          <div class="col-md-1 col-md-offset-6">
+            <p>Number</p>
+          </div>
         </div>
+        
+        <div class="information">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">Current Location:</div>
+                <div class="panel-body">
+                  Location
+                </div>
+              </div> 
+            </div>
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">Conditions:</div>
+                <div class="panel-body">
+                  Conditions
+                </div>
+              </div> 
+            </div>
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">Wind:</div>
+                <div class="panel-body">
+                  Wind
+                </div>
+              </div> 
+            </div>
+          </div><!-- .row -->
 
-        <div class="row ">
-          <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                Location
-              </div>
+          <div class="row">
+            <div class="col-md-1 col-md-offset-5">
+              <button class="btn btn-default">Change to &deg;</button>
             </div> 
           </div>
-          <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                Conditions
-              </div>
-            </div> 
-          </div>
-          <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                Wind
-              </div>
-            </div> 
-          </div>
-        </div><!-- .row -->
-
-      </div>
+        </div><!-- .information -->
     </div><!-- .container -->
 
   <script src="js/bootstrap.min.js"></script>

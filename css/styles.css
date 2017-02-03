@@ -1,3 +1,5 @@
+/* Entire page */
+
 *{
 	box-sizing: border-box: ;
 }
@@ -5,9 +7,26 @@
 body{
   background-color: black;
 }
+
+/* Title */
+
 .weather-app-title{
   color: white;
   font-family: 'Oswald', sans-serif;
   text-align: center;
   margin-top: 200px;
+}
+
+/* Information */
+
+.content{
+	margin-top: 50px;
+}
+
+.information{
+	margin-top: 20px;
+}
+
+.panel-default{
+	
 }
