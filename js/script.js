@@ -1,8 +1,16 @@
 $(document).ready(function() {
+
+  // var units = ['metric'];
+
+  $('#change-unit').on('click', function(){
+    units = 'imperial';
+  });
   
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      $.getJSON("http://api.openweathermap.org/data/2.5/find?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&cnt=10&units=metric&appid=8301741adabddef5ba1d50b386f29c9d", function(data) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+
+      units = 'metric';
+      $.getJSON("http://api.openweathermap.org/data/2.5/find?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&cnt=10&units=" + units + "&appid=8301741adabddef5ba1d50b386f29c9d", function(data) {
         
         //$('body').html("http://api.openweathermap.org/data/2.5/find?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&cnt=10&unit=metric&appid=8301741adabddef5ba1d50b386f29c9d");
         $.each( data, function( key, val ) {
@@ -18,4 +26,3 @@ $(document).ready(function() {
     });
   }  
 });
-
