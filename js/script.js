@@ -20,7 +20,7 @@ $(document).ready(function() {
           units = (units == 'metric') ? 'imperial' : 'metric';
 
           if (units === 'imperial') {
-            var farenheit = "<p>" + (data.list[0].main.temp * (9/5) + 32)  + "&deg; C</p>";
+            var farenheit = "<p>" + (data.list[0].main.temp * (9/5) + 32)  + "&deg; F</p>";
             $('.conditions').html(farenheit);
           } 
         });
