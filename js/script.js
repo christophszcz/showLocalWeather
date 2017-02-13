@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-  // var units = 'metric';
   
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -22,7 +20,10 @@ $(document).ready(function() {
           if (units === 'imperial') {
             var farenheit = "<p>" + (data.list[0].main.temp * (9/5) + 32)  + "&deg; F</p>";
             $('.conditions').html(farenheit);
-          } 
+          } else if (units === 'metric') {
+            var celsius = "<p>" + data.list[0].main.temp + "&deg; C</p>";
+            $('.conditions').html(celsius);
+          }
         });
 
         $('.current-location').html(current_location);
