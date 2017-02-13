@@ -1,11 +1,6 @@
 $(document).ready(function() {
 
-  // var units = ['metric'];
-
-  $('#change-unit').on('click', function(){
-    units = 'imperial';
-    $('.unit-value').toggle();
-  });
+  // var units = 'metric';
   
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -20,15 +15,21 @@ $(document).ready(function() {
           wind =  "<p>" +  data.list[0].wind.speed + " meter/sec</p>"
         });
 
-        if (previous && current && previous !== current) {
-          console.log('refresh');
-          location.reload();
-        }
+        $('#change-unit').on('click', function(){
+          $('.unit-value').toggle();
+          units = (units == 'metric') ? 'imperial' : 'metric';
+
+          if (units === 'imperial') {
+            var farenheit = "<p>" + (data.list[0].main.temp * (9/5) + 32)  + "&deg; C</p>";
+            $('.conditions').html(farenheit);
+          } 
+        });
 
         $('.current-location').html(current_location);
         $('.conditions').html(conditions);
         $('.wind').html(wind);
+ 
       }); 
     });
-  }  
+  }
 });
