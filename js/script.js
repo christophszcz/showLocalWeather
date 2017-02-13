@@ -10,7 +10,7 @@ $(document).ready(function() {
         $.each( data, function( key, val ) {
           current_location =  "<p>" + data.list[0].name + "</p>";
           conditions =  "<p>" + Math.floor(data.list[0].main.temp) + "&deg; C</p>";
-          wind =  "<p>" +  data.list[0].wind.speed + " meter/sec</p>"
+          wind =  "<p>" +  Math.floor(data.list[0].wind.speed * 3.6) + " km/hr</p>"
         });
 
         $('#change-unit').on('click', function(){
