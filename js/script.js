@@ -11,6 +11,7 @@ $(document).ready(function() {
       
       //$('body').html("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString);
       
+      description = "<p>" + json.weather[0].main + "</p>";
       conditions =  "<p>" + Math.floor(json.main.temp) + "&deg; C</p>";
       wind =  "<p>" +  Math.floor(json.wind.speed * 3.6) + " km/hr</p>";
 
@@ -28,6 +29,7 @@ $(document).ready(function() {
 
       $('.conditions').html(conditions);
       $('.wind').html(wind);
+      $('.description').html(description);
     }); 
   });
 
