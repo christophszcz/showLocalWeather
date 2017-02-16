@@ -19,10 +19,10 @@ $(document).ready(function() {
          $('.unit-value').toggle();
          units = (units == 'metric') ? 'imperial' : 'metric'
          if (units === 'imperial') {
-           var farenheit = "<p>" + Math.floor(json.main.temp * (9/5) + 32)  + "<span class='unit-deg'>&deg; F</span></p>";
+           var farenheit = "<p class='temperature'>" + Math.floor(json.main.temp * (9/5) + 32)  + "<span class='unit-deg'>&deg; F</span></p>";
            $('.conditions').html(farenheit);
          } else if (units === 'metric') {
-           var celsius = "<p>" + Math.floor(json.main.temp) + "&deg; C</p>";
+           var celsius = "<p class='temperature'>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
            $('.conditions').html(celsius);
          }
       });
