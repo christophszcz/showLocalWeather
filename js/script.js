@@ -13,7 +13,7 @@ $(document).ready(function() {
       
       description = "<p class='description-text'>" + json.weather[0].main + "</p>";
       conditions =  "<p class='temperature'>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
-      wind =  "<p>" +  Math.floor(json.wind.speed * 3.6) + " km/hr</p>";
+      wind =  "<p class='wind-speed'>" +  "Wind " + Math.floor(json.wind.speed * 3.6) + " km/h</p>";
 
       $('#change-unit').on('click', function(){
          $('.unit-value').toggle();

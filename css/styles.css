@@ -43,6 +43,11 @@ body{
   position: absolute;
 }
 
+.wind-speed {
+  color:#fff;
+  font-size: 12px;
+}
+
 .content{
 	margin-top: 50px;
 }
