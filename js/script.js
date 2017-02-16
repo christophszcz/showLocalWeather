@@ -12,14 +12,14 @@ $(document).ready(function() {
       //$('body').html("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString);
       
       description = "<p class='description-text'>" + json.weather[0].main + "</p>";
-      conditions =  "<p>" + Math.floor(json.main.temp) + "&deg; C</p>";
+      conditions =  "<p>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
       wind =  "<p>" +  Math.floor(json.wind.speed * 3.6) + " km/hr</p>";
 
       $('#change-unit').on('click', function(){
          $('.unit-value').toggle();
          units = (units == 'metric') ? 'imperial' : 'metric'
          if (units === 'imperial') {
-           var farenheit = "<p>" + Math.floor(json.main.temp * (9/5) + 32)  + "&deg; F</p>";
+           var farenheit = "<p>" + Math.floor(json.main.temp * (9/5) + 32)  + "<span class='unit-deg'>&deg; F</span></p>";
            $('.conditions').html(farenheit);
          } else if (units === 'metric') {
            var celsius = "<p>" + Math.floor(json.main.temp) + "&deg; C</p>";

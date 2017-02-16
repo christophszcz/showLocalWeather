@@ -12,53 +12,40 @@
     <h1 class="weather-app-title">Show Local Weather Webpage</h1>
 
     <div class="container content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="current-location"></div>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="current-location"></div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="description"></div>
-          </div>
-          <div class="col-md-1 col-md-offset-5">
-            <img src='https://img.clipartfest.com/18dfe1e3697233eb3b5be163dd1f51d0_windy-weather-clip-art-free-weather-symbols-clipart_425-404.jpeg' height='100px'/>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="description"></div>
         </div>
+      </div><!-- .row -->
         
-        <div class="information">
-          <div class="row">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <img src='https://img.clipartfest.com/18dfe1e3697233eb3b5be163dd1f51d0_windy-weather-clip-art-free-weather-symbols-clipart_425-404.jpeg' height='100px'/>
+        </div>
 
-            <div class="col-md-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">Conditions:</div>
-                <div class="panel-body">
-                  <p class="conditions"></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">Wind:</div>
-                <div class="panel-body">
-                  <p class="wind"></p>
-                </div>
-              </div> 
-            </div>
-          </div><!-- .row -->
-          <div id="data"></div>
+        <div class="col-md-3">
+          <div class="conditions"></div>
+        </div>
+      </div><!-- .row -->
           
-          <div class="row">
-            <div class="col-md-1 col-md-offset-5">
-              <button class="btn btn-default" id="change-unit">
-                <p class="unit-value">Change to F&deg;</p>
-                <p class="unit-value" style="display: none">Change to &deg;C</p>
-              </button>
-            </div> 
-          </div>
-        </div><!-- .information -->
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <div class="wind"></div>   
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-default" id="change-unit">
+            <p class="unit-value">Change to F&deg;</p>
+            <p class="unit-value" style="display: none">Change to &deg;C</p>
+          </button>
+        </div> 
+      </div><!-- .row -->
+
     </div><!-- .container -->
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
