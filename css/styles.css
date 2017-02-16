@@ -24,6 +24,14 @@ body{
   font-size:42px;
 }
 
+.description-text{
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1px;
+
+}
+
 .content{
 	margin-top: 50px;
 }
