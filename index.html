@@ -9,10 +9,14 @@
     <title>Show Local Weather</title>
   </head>
   <body>
-    <h1 class="weather-app-title">Show Local Weather Page</h1>
+    <h1 class="weather-app-title">Show Local Weather Webpage</h1>
 
     <div class="container content">
         <div class="row">
+
+          <div class="col-md-12">
+            <div class="current-location"></div>
+          </div>
           <div class="col-md-1 col-md-offset-5">
             <img src='https://img.clipartfest.com/18dfe1e3697233eb3b5be163dd1f51d0_windy-weather-clip-art-free-weather-symbols-clipart_425-404.jpeg' height='100px'/>
           </div>
@@ -24,16 +28,7 @@
         <div class="information">
           <div class="row">
 
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">Current Location:</div>
-                <div class="panel-body">
-                  <p class="current-location"></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-4" id="middle-panel">
+            <div class="col-md-12">
               <div class="panel panel-default">
                 <div class="panel-heading">Conditions:</div>
                 <div class="panel-body">
@@ -42,7 +37,7 @@
               </div> 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-12">
               <div class="panel panel-default">
                 <div class="panel-heading">Wind:</div>
                 <div class="panel-body">

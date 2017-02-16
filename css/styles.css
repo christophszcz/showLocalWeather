@@ -18,6 +18,12 @@ body{
 
 /* Information */
 
+.current-location{
+  text-align: center;
+  color:#fff;
+  font-size:42px;
+}
+
 .content{
 	margin-top: 50px;
 }
