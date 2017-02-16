@@ -12,7 +12,7 @@ $(document).ready(function() {
       //$('body').html("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString);
       
       description = "<p class='description-text'>" + json.weather[0].main + "</p>";
-      conditions =  "<p>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
+      conditions =  "<p class='temperature'>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
       wind =  "<p>" +  Math.floor(json.wind.speed * 3.6) + " km/hr</p>";
 
       $('#change-unit').on('click', function(){

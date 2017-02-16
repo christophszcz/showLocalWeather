@@ -32,9 +32,15 @@ body{
 
 }
 
+.temperature {
+  color: #fff;
+  font-size: 70px;
+}
+
 .unit-deg {
   color: #fff;
   font-size: 20px;
+  position: absolute;
 }
 
 .content{
