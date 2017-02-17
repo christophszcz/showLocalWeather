@@ -30,6 +30,7 @@ $(document).ready(function() {
       $('.conditions').html(conditions);
       $('.wind').html(wind);
       $('.description').html(description);
+      $('#weather-symbol').attr('src', "images/" + json.weather[0].main + ".png")
     }); 
   });
 
