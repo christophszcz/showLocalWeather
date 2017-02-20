@@ -79,4 +79,14 @@ body{
 .footer {
   float: right;
   margin-top: 100px;
+  font-style: italic;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (min-width: 992px){
+  .weather-image{
+    text-align: center;
+  }
 }
