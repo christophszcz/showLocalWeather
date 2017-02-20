@@ -34,7 +34,7 @@ $(document).ready(function() {
 
       var currentTime = new Date();
       var time = currentTime.getTime();
-      $('.time').html(currentTime);
+      $('.time-data').html(currentTime);
 
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
