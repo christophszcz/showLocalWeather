@@ -32,6 +32,11 @@ $(document).ready(function() {
       $('.description').html(description);
       $('#weather-symbol').attr('src', "images/" + json.weather[0].icon  + ".png")
 
+      var currentTime = new Date();
+      var time = currentTime.getTime();
+      $('.time').html(currentTime);
+
+
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
         $('body').css('background', "url('../images/clear_day.jpg')");
       } else if(json.weather[0].icon == '03d' || json.weather[0].icon == '04d'){
