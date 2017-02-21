@@ -49,6 +49,8 @@ $(document).ready(function() {
         $('body').css('background', "url('../images/rain_night.jpg')");
       } else if(json.weather[0].icon == '13d' || json.weather[0].icon == '13n'){
         $('body').css('background', "url('../images/snow.jpg')");
+      } else if(json.weather[0].icon == '50d' || json.weather[0].icon == '50n'){
+        $('body').css('background', "url('../images/fog.jpg')");
       // } else if (){
       }
     }); 
