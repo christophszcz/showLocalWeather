@@ -41,8 +41,10 @@ $(document).ready(function() {
         $('body').css('background', "url('../images/clear_day.jpg')");
       } else if(json.weather[0].icon == '03d' || json.weather[0].icon == '04d'){
         $('body').css('background', "url('../images/storm_day.jpg')");
-      } else if(json.weather[0].icon == '01n' || json.weather[0].icon == '02n' ||  json.weather[0].icon == '03n' || json.weather[0].icon == '04n' ){
+      } else if(json.weather[0].icon == '01n' || json.weather[0].icon == '02n'){
         $('body').css('background', "url('../images/clear_night.jpg')");
+      } else if(json.weather[0].icon == '03n' || json.weather[0].icon == '04n'){
+        $('body').css('background', "url('../images/cloudy_night.jpg')");
       // } else if (){
 
       }
