@@ -89,4 +89,13 @@ body{
   .weather-image{
     text-align: center;
   }
+  .conditions{
+    text-align: center;
+  }
+  .wind{
+    text-align: center;
+  }
+  .button-section{
+    text-align: center;
+  }
 }
