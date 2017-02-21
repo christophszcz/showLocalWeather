@@ -85,7 +85,7 @@ body{
 
 /* Media Queries */
 
-@media (min-width: 992px){
+@media (max-width: 992px){
   .weather-image{
     text-align: center;
   }
