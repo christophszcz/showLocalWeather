@@ -1,11 +1,7 @@
 /* Entire page */
 
-*{
-	box-sizing: border-box: ;
-}
-
-body{
-  /*background: url('../images/storm_day.jpg');*/
+* {
+	box-sizing: border-box;
 }
 
 /* Title */
