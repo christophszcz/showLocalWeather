@@ -34,6 +34,12 @@ $(document).ready(function() {
       var imageName = 'default';
       if (json.weather[0].icon == '50n' || json.weather[0].icon == '50d'){
         imageName = '50d';
+      } else if (json.weather[0].icon == '13d' || json.weather[0].icon == '13n'){
+        imageName = '13d';
+      } else if (json.weather[0].icon == '09d' || json.weather[0].icon == '09n' || json.weather[0].icon == '10d' || json.weather[0].icon == '10n' ){
+        imageName = '10d';
+      } else if (json.weather[0].icon == '11d' || json.weather[0].icon == '11n'){
+        imageName = '11d';
       }
 
       $('#weather-symbol').attr('src', "images/" + imageName + ".png");
