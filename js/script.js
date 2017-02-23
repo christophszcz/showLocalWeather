@@ -32,16 +32,24 @@ $(document).ready(function() {
       $('.description').html(description);
 
       var imageName = 'default';
-      if (json.weather[0].icon == '03d' || json.weather[0].icon == '03n' || json.weather[0].icon == '04d' || json.weather[0].icon == '04n' ){
+      if (json.weather[0].icon == '01d'){
+        imageName = '01d';
+      } else if (json.weather[0].icon == '01n'){
+        imageName = '01n';
+      } else if (json.weather[0].icon == '02d'){
+        imageName = '02d';
+      } else if (json.weather[0].icon == '02n'){
+        imageName = '02n';
+      } else if (json.weather[0].icon == '03d' || json.weather[0].icon == '03n' || json.weather[0].icon == '04d' || json.weather[0].icon == '04n' ){
         imageName = '04d';
-      } else if (json.weather[0].icon == '50n' || json.weather[0].icon == '50d'){
-        imageName = '50d';
-      } else if (json.weather[0].icon == '13d' || json.weather[0].icon == '13n'){
-        imageName = '13d';
       } else if (json.weather[0].icon == '09d' || json.weather[0].icon == '09n' || json.weather[0].icon == '10d' || json.weather[0].icon == '10n' ){
         imageName = '10d';
       } else if (json.weather[0].icon == '11d' || json.weather[0].icon == '11n'){
         imageName = '11d';
+      } else if (json.weather[0].icon == '13d' || json.weather[0].icon == '13n'){
+        imageName = '13d';
+      } else if (json.weather[0].icon == '50n' || json.weather[0].icon == '50d'){
+        imageName = '50d';
       }
 
       $('#weather-symbol').attr('src', "images/" + imageName + ".png");
