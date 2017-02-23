@@ -30,12 +30,17 @@ $(document).ready(function() {
       $('.conditions').html(conditions);
       $('.wind').html(wind);
       $('.description').html(description);
-      $('#weather-symbol').attr('src', "images/" + json.weather[0].icon  + ".png")
+
+      var imageName = 'default';
+      if (json.weather[0].icon == '50n' || json.weather[0].icon == '50d'){
+        imageName = '50d';
+      }
+
+      $('#weather-symbol').attr('src', "images/" + imageName + ".png");
 
       var currentTime = new Date();
       var time = currentTime.getTime();
       $('.time-data').html(currentTime);
-
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
         $('body').css('background', "url('../images/clear_day.jpg')");
