@@ -54,11 +54,7 @@ $(document).ready(function() {
 
       $('#weather-symbol').attr('src', "images/" + imageName + ".png");
 
-      // var currentTime = new Date();
-      // var time = currentTime.getTime();
-      // $('.time-data').html(currentTime);
-
-      var date = moment.unix(json.dt).format("DD-MM-YYYY HH:mm:ss");
+      var date = moment.unix(json.dt).format("DD-MM-YYYY h:mm:ss a");
       $('.time-data').html(date);
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
