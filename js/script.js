@@ -1,7 +1,7 @@
 $(document).ready(function() {
  
   $.getJSON('http://ip-api.com/json/', function(data) {  //I.P address API
-    //console.log(JSON.stringify(data, null, 2));
+    console.log(JSON.stringify(data, null, 2));
     current_location =  "<p>" + data.city + " , " + data.country + "</p>";
     city_name = data.city
     $('.current-location').html(current_location);
@@ -56,7 +56,9 @@ $(document).ready(function() {
 
       var currentTime = new Date();
       var time = currentTime.getTime();
-      $('.time-data').html(currentTime);
+      // $('.time-data').html(currentTime);
+
+      $('.time-data').html(json.dt);
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
         $('body').css('background', "url('../images/clear_day.jpg')");
