@@ -1,7 +1,7 @@
 $(document).ready(function() {
  
   $.getJSON('http://ip-api.com/json/', function(data) {  //I.P address API
-    console.log(JSON.stringify(data, null, 2));
+    //console.log(JSON.stringify(data, null, 2));
     current_location =  "<p>" + data.city + " , " + data.country + "</p>";
     city_name = data.city
     $('.current-location').html(current_location);
@@ -54,21 +54,12 @@ $(document).ready(function() {
 
       $('#weather-symbol').attr('src', "images/" + imageName + ".png");
 
-      var currentTime = new Date();
-      var time = currentTime.getTime();
+      // var currentTime = new Date();
+      // var time = currentTime.getTime();
       // $('.time-data').html(currentTime);
 
-      var date = new Date(json.dt *1000);
-      // Hours part from the timestamp
-      var hours = date.getHours();
-      // Minutes part from the timestamp
-      var minutes = "0" + date.getMinutes();
-      // Seconds part from the timestamp
-      var seconds = "0" + date.getSeconds();
-
-      // Will display time in 10:30:23 format
-      var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-      $('.time-data').html(formattedTime);
+      var date = moment.unix(json.dt).format("DD-MM-YYYY HH:mm:ss");
+      $('.time-data').html(date);
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
         $('body').css('background', "url('../images/clear_day.jpg')");
