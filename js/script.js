@@ -8,9 +8,7 @@ $(document).ready(function() {
     apiKeyString = "&appid=8301741adabddef5ba1d50b386f29c9d";
     units = 'metric';
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString, function(json) { //Weather API
-      
-      //$('body').html("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString);
-      
+          
       description = "<p class='description-text'>" + json.weather[0].main + "</p>";
       conditions =  "<p class='temperature'>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
       wind =  "<p class='wind-speed'>" +  "Wind " + Math.floor(json.wind.speed * 3.6) + " km/h</p>";
@@ -58,23 +56,23 @@ $(document).ready(function() {
       $('.time-data').html(date);
 
       if(json.weather[0].icon == '01d' || json.weather[0].icon == '02d'){
-        $('body').css('background', "url('../images/clear_day.jpg')");
+        $('body').css('background', "url('images/clear_day.jpg')");
       } else if(json.weather[0].icon == '01n' || json.weather[0].icon == '02n'){
-        $('body').css('background', "url('../images/clear_night.jpg')");
+        $('body').css('background', "url('images/clear_night.jpg')");
       } else if(json.weather[0].icon == '03d' || json.weather[0].icon == '04d'){
-        $('body').css('background', "url('../images/storm_day.jpg')");
+        $('body').css('background', "url('images/storm_day.jpg')");
       } else if(json.weather[0].icon == '03n' || json.weather[0].icon == '04n'){
-        $('body').css('background', "url('../images/cloudy_night.jpg')");
+        $('body').css('background', "url('images/cloudy_night.jpg')");
       } else if(json.weather[0].icon == '09d' || json.weather[0].icon == '10d'){
-        $('body').css('background', "url('../images/rain_day.jpg')");
+        $('body').css('background', "url('images/rain_day.jpg')");
       } else if(json.weather[0].icon == '09n' || json.weather[0].icon == '10n'){
-        $('body').css('background', "url('../images/rain_night.jpg')");
+        $('body').css('background', "url('images/rain_night.jpg')");
       } else if(json.weather[0].icon == '11d' || json.weather[0].icon == '11n'){
-        $('body').css('background', "url('../images/storm_night.jpg')");
+        $('body').css('background', "url('images/storm_night.jpg')");
       } else if(json.weather[0].icon == '13d' || json.weather[0].icon == '13n'){
-        $('body').css('background', "url('../images/snow.jpg')");
+        $('body').css('background', "url('images/snow.jpg')");
       } else if(json.weather[0].icon == '50d' || json.weather[0].icon == '50n'){
-        $('body').css('background', "url('../images/fog.jpg')");
+        $('body').css('background', "url('images/fog.jpg')");
       }
     }); 
   });
