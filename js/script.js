@@ -1,14 +1,13 @@
 $(document).ready(function() {
  
-  $.getJSON('http://ip-api.com/json/', function(data) {  //I.P address API
+  $.getJSON('https://ipapi.co/json/', function(data) {  //I.P address API
     //console.log(JSON.stringify(data, null, 2));
-    current_location =  "<p>" + data.city + " , " + data.country + "</p>";
+    current_location =  "<p>" + data.city + " , " + data.country_name + "</p>";
     city_name = data.city
     $('.current-location').html(current_location);
     apiKeyString = "&appid=8301741adabddef5ba1d50b386f29c9d";
     units = 'metric';
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString, function(json) { //Weather API
-          
       description = "<p class='description-text'>" + json.weather[0].main + "</p>";
       conditions =  "<p class='temperature'>" + Math.floor(json.main.temp) + "<span class='unit-deg'>&deg; C</span></p>";
       wind =  "<p class='wind-speed'>" +  "Wind " + Math.floor(json.wind.speed * 3.6) + " km/h</p>";
