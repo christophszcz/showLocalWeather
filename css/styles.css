@@ -73,6 +73,24 @@
   color: #fff;
 }
 
+/* Dev info */
+
+.dev-info{
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+  bottom: 25px;
+  right: 10px;
+  color: #000;
+}
+
+#website-link{
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
 /* Media Queries */
 
 @media (max-width: 992px){
