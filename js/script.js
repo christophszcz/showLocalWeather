@@ -1,17 +1,29 @@
-const fetchPromise = fetch('https://ipapi.co/json/');
+const ipAddressEndpoint = 'https://ipapi.co/json/';
 
-fetchPromise.then(response => {
-  return response.json();
-}).then(data => {
-  current_location =  "<p>" + data.city + " , " + data.country_name + "</p>";
-  city_name = data.city;
+const getIPInfo = () => {
+  const fetchPromise = fetch(ipAddressEndpoint);
+  fetchPromise.then(response => {
+    return response.json();
+  }).then(data => {
+    current_location =  "<p>" + data.city + " , " + data.country_name + "</p>";
+    city_name = data.city;
+    $('.current-location').html(current_location);
 
-  $('.current-location').html(current_location);
-  apiKeyString = "&appid=8301741adabddef5ba1d50b386f29c9d";
-  units = 'metric';
-});
+    apiKeyString = "&appid=8301741adabddef5ba1d50b386f29c9d";
+    units = 'metric';
+  });
+};
 
 // TODO (christophszcz): Handle failed case and initial loading
+
+async function asyncAwaitVersion() {
+  let firstValue = await getIPInfo();
+  console.log(firstValue);
+  // let secondValue = await returnsSecondPromise(firstValue);
+  // console.log(secondValue);
+}
+
+asyncAwaitVersion();
 
 // $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString, function(json) { //Weather API
 //   description = "<p class='description-text'>" + json.weather[0].main + "</p>";
