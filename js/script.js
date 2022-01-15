@@ -1,5 +1,8 @@
-$.getJSON('https://ipapi.co/json/', function(data) {  //I.P address API
-  console.log(JSON.stringify(data, null, 2));
+const fetchPromise = fetch('https://ipapi.co/json/');
+
+fetchPromise.then(response => {
+  return response.json();
+}).then(data => {
   current_location =  "<p>" + data.city + " , " + data.country_name + "</p>";
   city_name = data.city;
 
@@ -7,6 +10,8 @@ $.getJSON('https://ipapi.co/json/', function(data) {  //I.P address API
   apiKeyString = "&appid=8301741adabddef5ba1d50b386f29c9d";
   units = 'metric';
 });
+
+// TODO (christophszcz): Handle failed case and initial loading
 
 // $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=" + units + apiKeyString, function(json) { //Weather API
 //   description = "<p class='description-text'>" + json.weather[0].main + "</p>";
